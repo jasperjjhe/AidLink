@@ -291,14 +291,14 @@ export function OrganizerIncidentDrawer({
                 placeholder="Location name"
                 className="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
               />
-              <div className="flex gap-2">
+              <div className="flex min-w-0 gap-2">
                 <input
                   type="number"
                   step="any"
                   value={latDraft}
                   onChange={(e) => setLatDraft(e.target.value)}
                   placeholder="Lat"
-                  className="flex flex-1 rounded-md border border-input bg-background px-3 py-2 text-sm"
+                  className="min-w-0 flex-1 rounded-md border border-input bg-background px-3 py-2 text-sm"
                 />
                 <input
                   type="number"
@@ -306,7 +306,7 @@ export function OrganizerIncidentDrawer({
                   value={lngDraft}
                   onChange={(e) => setLngDraft(e.target.value)}
                   placeholder="Lng"
-                  className="flex flex-1 rounded-md border border-input bg-background px-3 py-2 text-sm"
+                  className="min-w-0 flex-1 rounded-md border border-input bg-background px-3 py-2 text-sm"
                 />
               </div>
             </div>
