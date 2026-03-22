@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { X, ExternalLink } from "lucide-react";
 import type { MapIncident } from "@/types/incident-json";
@@ -142,11 +141,15 @@ export function MapIncidentDrawer({ incident, onClose }: MapIncidentDrawerProps)
           </div>
         )}
 
-        {incident.source === "json" && (
-          <Button variant="outline" className="w-full" asChild>
-            <Link href={`/volunteer`}>Offer to help</Link>
-          </Button>
-        )}
+        <div className="rounded-xl border bg-muted/30 px-4 py-3 text-sm">
+          <span className="text-muted-foreground">Offer to help: </span>
+          <a
+            href="tel:02-2929984"
+            className="font-medium text-primary hover:underline"
+          >
+            Tel: 02-2929984
+          </a>
+        </div>
       </div>
     </div>
   );

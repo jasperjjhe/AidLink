@@ -123,9 +123,15 @@ export default function IncidentReportDetailPage() {
               )}
             </section>
 
-            <Button asChild className="w-full sm:w-auto">
-              <Link href={`/volunteer?incident=${data.id}`}>Offer to help at this incident</Link>
-            </Button>
+            <div className="rounded-xl border bg-muted/30 px-4 py-3 text-sm">
+              <span className="text-muted-foreground">Offer to help: </span>
+              <a
+                href="tel:02-2929984"
+                className="font-medium text-primary hover:underline"
+              >
+                Tel: 02-2929984
+              </a>
+            </div>
           </article>
         )}
       </main>
