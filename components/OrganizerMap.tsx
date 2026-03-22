@@ -2,10 +2,17 @@
 
 import { useCallback, useEffect, useState, useMemo } from "react";
 import dynamic from "next/dynamic";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { AidLinkLogo } from "@/components/AidLinkLogo";
 import { Button } from "@/components/ui/button";
-import { useAuthStore } from "@/lib/auth-store";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { OrganizerOpenIncidentsPanel } from "@/components/OrganizerOpenIncidentsPanel";
 import { OrganizerIncidentDrawer } from "@/components/OrganizerIncidentDrawer";
 import { MapIncidentDrawer } from "@/components/MapIncidentDrawer";
@@ -18,8 +25,15 @@ import { getZoneForPoint } from "@/lib/gaza-zones";
 import { getZoneForPoint as getUkraineZoneForPoint } from "@/lib/ukraine-zones";
 import { jsonToMapIncident, prismaToMapIncident } from "@/lib/incident-adapters";
 import { REGIONS } from "@/lib/regions";
+import { useLanguageStore } from "@/lib/language-store";
 import type { RegionId, LangCode } from "@/lib/region-types";
-import { LogOut, RefreshCw } from "lucide-react";
+
+const LANG_LABELS: Record<LangCode, string> = {
+  en: "English",
+  ar: "العربية",
+  uk: "Українська",
+};
+import { RefreshCw } from "lucide-react";
 import { t } from "@/lib/translations";
 import type { Incident, VolunteerProfile, Assignment } from "@prisma/client";
 import type { MapIncident, IncidentJson } from "@/types/incident-json";
@@ -64,8 +78,10 @@ interface OrganizerMapProps {
 }
 
 export function OrganizerMap({ region, lang }: OrganizerMapProps) {
-  const { logout } = useAuthStore();
+  const router = useRouter();
+  const { setLang } = useLanguageStore();
   const regionConfig = REGIONS[region];
+  const availableLangs = regionConfig.languages;
   const [supabaseIncidents, setSupabaseIncidents] = useState<MapIncident[]>([]);
   const [prismaIncidents, setPrismaIncidents] = useState<IncidentWithAssignments[]>([]);
   const [jsonFallbackIncidents, setJsonFallbackIncidents] = useState<MapIncident[]>([]);
@@ -298,21 +314,36 @@ export function OrganizerMap({ region, lang }: OrganizerMapProps) {
       <header className="shrink-0 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-14 items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
           <AidLinkLogo className="ml-2 sm:ml-4" />
-          <nav className="flex flex-wrap items-center justify-end gap-x-3 gap-y-2 sm:gap-x-4">
+          <nav className="flex items-center justify-end gap-2 sm:gap-3">
             <Link href="/" className="shrink-0">
-              <Button variant="outline" size="sm">
-                Home
+              <Button variant="outline" size="sm" className="h-9">
+                {t(lang, "home")}
               </Button>
             </Link>
             <Link href={`/map?region=${region}&lang=${lang}`} className="shrink-0">
-              <Button variant="outline" size="sm">
-                Crisis Map
+              <Button variant="outline" size="sm" className="h-9">
+                {t(lang, "crisisMap")}
               </Button>
             </Link>
-            <Button variant="ghost" size="sm" onClick={logout} className="gap-1">
-              <LogOut className="h-4 w-4" />
-              Log out
-            </Button>
+            <Select
+              value={lang}
+              onValueChange={(v) => {
+                const newLang = v as LangCode;
+                setLang(newLang);
+                router.replace(`/dashboard?region=${region}&lang=${newLang}`);
+              }}
+            >
+              <SelectTrigger className="w-[100px] sm:w-[110px] h-9 shrink-0" aria-label={t(lang, "selectLanguage")}>
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                {availableLangs.map((code) => (
+                  <SelectItem key={code} value={code}>
+                    {LANG_LABELS[code] ?? code}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           </nav>
         </div>
       </header>

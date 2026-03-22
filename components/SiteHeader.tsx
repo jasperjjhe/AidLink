@@ -52,6 +52,11 @@ export function SiteHeader({ navItems, className }: SiteHeaderProps) {
               </Button>
             </Link>
           ))}
+          <Link href="/dashboard" className="shrink-0">
+            <Button variant="outline" size="sm">
+              {t(lang, "organizerMap")}
+            </Button>
+          </Link>
           <Select value={lang} onValueChange={(v) => setLang(v as LangCode)}>
             <SelectTrigger className="w-[100px] sm:w-[110px] h-9 shrink-0" aria-label={t(lang, "selectLanguage")}>
               <SelectValue />
@@ -64,11 +69,6 @@ export function SiteHeader({ navItems, className }: SiteHeaderProps) {
               ))}
             </SelectContent>
           </Select>
-          <Link href="/dashboard" className="shrink-0">
-            <Button variant="outline" size="sm">
-              {t(lang, "organizerMap")}
-            </Button>
-          </Link>
         </nav>
       </div>
     </header>
