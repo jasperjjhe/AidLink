@@ -109,21 +109,93 @@ Rules:
 Example Persian: ایران ریزش OR آوار OR زیر آوار -is:retweet lang:fa -donate -GoFundMe -hospital -Israel -Arad -Dimona -missile -strikes -ballistic
 Example English: Iran \"building collapse\" OR \"trapped rubble\" OR \"earthquake collapse\" -is:retweet lang:en -donate -GoFundMe -hospital -Israel -Arad -Dimona -missile -strikes -ballistic
         """
+    },
+    "ukraine": {
+    "name":          "Ukraine",
+    "incidents_dir": "incidents/ukraine",
+    "bounds": {
+        "lat_min": 44.0,
+        "lat_max": 52.4,
+        "lon_min": 22.0,
+        "lon_max": 40.2,
+        "center":  {"lat": 48.5, "lon": 31.5},
+    },
+    "query_prompt": """
+You are generating Twitter/X search queries to find building collapse and rescue reports in Ukraine.
+
+Generate 6 queries total. Split by language — do NOT mix Ukrainian/Russian and English in the same query.
+
+Rules:
+- 3 queries in Ukrainian only, 3 queries in English only
+- Every query must contain a location term: Ukrainian queries use України OR Україна OR Київ OR Харків OR Херсон OR Маріуполь, English queries use Ukraine
+- Use simple flat keyword combinations — do NOT use nested parentheses
+- Format: keyword1 OR keyword2 OR keyword3 locationterm -is:retweet lang:xx -exclusions
+- Use lang:uk for Ukrainian queries, lang:en for English queries
+- Focus ONLY on: building collapses from strikes, structural collapses, people trapped in rubble, rescue operations
+- Ukrainian collapse terms: завал (collapse), обвал (cave-in), завалений (buried), під завалами (under rubble), рятувальники (rescuers), уламки (debris), врятували (rescued), заблокований (trapped)
+- English collapse terms: "building collapse", "trapped rubble", "under debris", "rescue operation", "collapsed building", "airstrike collapse", "strike collapse"
+- Exclusions for every query: -donate -GoFundMe -fundraise -sick
+- Max 500 characters per query
+- Return ONLY a JSON array of strings, nothing else. No explanation, no markdown.
+- Location term must be among the first 1-2 words in every query
+
+Example Ukrainian: Україна завал OR обвал OR під завалами OR рятувальники -is:retweet lang:uk -donate -GoFundMe
+Example English: Ukraine "building collapse" OR "trapped rubble" OR "under debris" OR "rescue operation" -is:retweet lang:en -donate -GoFundMe
+    """
     }
 }
 
 # ── Helpers ──────────────────────────────────────────────────────────────────
 
+async def switch_x_account(page) -> bool:
+    try:
+        print("🔄 Switching X account...")
+        await page.click('[data-testid="SideNav_AccountSwitcher_Button"]')
+        await page.wait_for_timeout(3000)
+        
+        # Find the alt account button by aria-label
+        alt_account = await page.query_selector('[aria-label^="Switch to"]')
+        if not alt_account:
+            print("❌ No alt account found")
+            return False
+        
+        label = await alt_account.get_attribute("aria-label")
+        print(f"  Switching to: {label}")
+        await alt_account.click()
+        await page.wait_for_timeout(4000)
+        print("✅ Switched account")
+        return True
+        
+    except Exception as e:
+        print(f"❌ Switch failed: {e}")
+        return False
+
+async def load_session(context, page) -> bool:
+    if not os.path.exists("x_cookies.json"):
+        print("❌ x_cookies.json not found — run get_cookies.py first")
+        return False
+    with open("x_cookies.json") as f:
+        cookies = json.load(f)
+    await context.add_cookies(cookies)
+    await page.goto("https://x.com/home")
+    await page.wait_for_timeout(3000)
+    if "login" in page.url:
+        print("❌ Cookies expired — re-run get_cookies.py")
+        return False
+    print("✅ Session loaded")
+    return True
+
 async def safe_goto(page, url: str, retries: int = 3) -> bool:
     for attempt in range(retries):
         await page.goto(url)
         await page.wait_for_timeout(random.randint(3000, 6000))
-        
-        # Check for error page
         content = await page.content()
         if "something went wrong" in content.lower() or "try reloading" in content.lower():
             wait = 15 * (attempt + 1)
-            print(f"  ⚠️  X error page detected, waiting {wait}s... (attempt {attempt+1}/{retries})")
+            print(f"  ⚠️  X error page, waiting {wait}s... (attempt {attempt+1}/{retries})")
+            if attempt == 1:
+                print("  🔄 Trying account switch...")
+                await switch_x_account(page)
             await page.wait_for_timeout(wait * 1000)
             await page.reload()
             await page.wait_for_timeout(3000)
@@ -147,6 +219,21 @@ def prefilter_tweets(tweets: list[dict], region_key: str) -> list[dict]:
                            "building collapse", "trapped rubble", "earthquake collapse"],
             "must_exclude": ["missile", "ballistic", "Arad", "Dimona", "Israel",
                            "موشک", "اسرائیل", "political", "سیاسی"],
+        },
+        "ukraine": {
+            "must_contain": [
+                "україн", "Україн",  # covers Україна, України, etc.
+                "ukraine", "Ukraine",
+                "завал", "обвал", "під завалами", "уламки",
+                "рятувальник",       # covers рятувальники, рятувальника
+                "врятував",          # covers врятували, врятував
+                "building collapse", "trapped rubble", "under debris",
+                "rescue operation", "collapsed building"
+            ],
+            "must_exclude": [
+                "donate", "fundraise", "gofundme",
+                "stock", "market", "currency", "economy"
+            ],
         }
     }
     
@@ -182,14 +269,18 @@ def get_criticality(hours: float) -> str:
         return "needs_support"
     return "cleanup"
 
-def get_casualties_category(count: int) -> str:
+def get_casualties_category(count) -> str:
+    if not isinstance(count, (int, float)) or count is None:
+        count = 0
     if count < CASUALTIES["few"]:
         return "few"
     elif count < CASUALTIES["some"]:
         return "some"
     return "many"
 
-def get_manpower_category(count: int) -> str:
+def get_manpower_category(count) -> str:
+    if not isinstance(count, (int, float)) or count is None:
+        count = 0
     if count < MANPOWER["small"]:
         return "small"
     elif count < MANPOWER["moderate"]:
@@ -252,8 +343,20 @@ def call_gemini(prompt: str) -> str:
 
 # ── STEP 1: Generate queries ─────────────────────────────────────────────────
 def generate_queries(region_key: str) -> list[str]:
-    text    = call_gemini(REGIONS[region_key]["query_prompt"]).replace("```json", "").replace("```", "").strip()
-    queries = json.loads(text)
+    raw = call_gemini(REGIONS[region_key]["query_prompt"])
+    text = raw.replace("```json", "").replace("```", "").strip()
+    
+    try:
+        queries = json.loads(text)
+    except json.JSONDecodeError as e:
+        print(f"  ⚠️  Gemini returned invalid JSON: {e}")
+        print(f"  Raw response: {repr(text[:200])}")
+        # Retry once with a stricter prompt
+        retry_prompt = REGIONS[region_key]["query_prompt"] + "\n\nCRITICAL: Return ONLY a JSON array. No text before or after. No markdown. Start with [ and end with ]."
+        raw2 = call_gemini(retry_prompt)
+        text2 = raw2.replace("```json", "").replace("```", "").strip()
+        queries = json.loads(text2)
+    
     print(f"\n✅ [{region_key.upper()}] Gemini generated {len(queries)} queries:")
     for q in queries:
         print(f"   • {q}")
@@ -354,8 +457,8 @@ def cluster_into_incidents(tweets: list[dict], existing: list[dict], region_key:
     } for i in existing], ensure_ascii=False)
 
     prompt = f"""
-You are a humanitarian crisis analyst for {region_name}. Cluster these tweets about
-building collapses and people trapped in rubble into discrete incidents.
+You are a strict humanitarian crisis analyst for {region_name}. Your job is to identify
+REAL, DISCRETE, ACTIONABLE incidents from tweets — not commentary, poetry, rants, or statistics.
 
 Region bounding box: lat {bounds['lat_min']}–{bounds['lat_max']}, lon {bounds['lon_min']}–{bounds['lon_max']}
 Region center (use if location unknown): {bounds['center']}
@@ -366,30 +469,70 @@ EXISTING INCIDENTS (do not duplicate):
 NEW TWEETS:
 {tweets_text}
 
-RULES:
-1. Only include tweets about building collapses or people trapped in rubble in {region_name}
-2. Ignore: donations, GoFundMe, illness, sickness, general commentary, politics
-3. Group tweets about the same incident together
-4. Match to existing incidents where possible (same location + time window)
-5. All coordinates MUST be within the bounding box
-6. location_centre: triangulate from place names using your knowledge of local geography.
-   If uncertain use region center {bounds['center']}
-7. location_radius_km: 0.1 = single building, 0.5 = neighborhood, 2.0 = district
-8. casualties_estimate: use numbers from tweets, or estimate from building type + time of day + density
-9. manpower_needed_estimate: estimate responders needed from casualties + radius
-10. time_of_incident: earliest tweet timestamp (ISO format)
-11. Updates to existing incidents: set is_update true and include the existing incident_id
+STRICT FILTERING — REJECT any tweet that is:
+- Poetry, prayers, laments, or emotional commentary ("اللهم", "يا رب", etc.)
+- General political statements or war commentary without a specific incident
+- Aggregated statistics reports (e.g. "X people killed this month") — unless they reference
+  a specific identifiable incident with location and time
+- Metaphorical use of collapse/rubble language
+- References to historical incidents (more than 2 weeks old) without new rescue activity
+- Reposts of the same breaking news story without additional incident detail
+- Fundraising appeals even without explicit donation links
+
+ACCEPT only tweets that describe:
+- A specific building or structure that has collapsed at a specific location
+- People confirmed trapped, rescued, or killed in a specific collapse
+- Active rescue operations at a specific site
+- Official emergency service responses to a specific incident
+
+GROUPING RULES:
+- Group tweets about the same physical incident together
+- Same incident = same location + same timeframe (within 6 hours)
+- Match to existing incidents where possible
+
+TIME OF INCIDENT:
+- First look for an explicit time mentioned IN the tweet text (e.g. "this morning", "at 3am", specific dates)
+- If found, use that as time_of_incident
+- Only fall back to the tweet's post timestamp if no time is mentioned in the text
+- Set time_source to "mentioned_in_tweet" or "post_timestamp" accordingly
+
+CRITICALITY — do NOT just use time. Consider:
+- "critical": Active rescue needed, people confirmed trapped NOW, ongoing emergency
+- "needs_support": Rescue underway but needs more resources, recent collapse with unknowns
+- "cleanup": Incident resolved, all found (dead or alive), no active rescue needed
+- Override time-based criticality if tweets mention: resolved, all rescued, bodies recovered,
+  hospital admission counts finalized — set to "cleanup" regardless of time
+- If tweets mention ongoing rescue, active search, people still missing — set "critical"
+  regardless of time
+
+STATISTICS POSTS:
+- If a post lists aggregate statistics (e.g. "47 buildings collapsed this week in Kherson"),
+  treat it as LOW confidence background context only
+- Do NOT create a single incident from aggregate statistics
+- Only use it to UPDATE an existing incident's casualty estimate if it clearly refers to the same incident
+
+CONFIDENCE SCORE (be strict — most incidents should be "likely" or lower):
+- "unsure" (0-25%): Single tweet, vague location, no corroboration, possible metaphor
+- "likely" (25-75%): Multiple tweets, specific location named, consistent details
+- "confident" (75%+): Official source (civil defense, emergency services), multiple
+  corroborating tweets with consistent specific details, named location + time + casualty count
 
 Return a JSON array. Each object must have exactly these fields:
 {{
   "incident_id": "existing ID if update, else null",
   "is_update": true/false,
-  "summary": "one sentence in English",
+  "summary": "one factual sentence in English describing WHAT happened WHERE",
   "location_centre": {{"lat": float, "lon": float}},
   "location_radius_km": float,
   "casualties_estimate": integer,
   "manpower_needed_estimate": integer,
   "time_of_incident": "ISO timestamp",
+  "time_source": "mentioned_in_tweet" or "post_timestamp",
+  "criticality": "critical" | "needs_support" | "cleanup",
+  "criticality_reason": "one sentence explaining why this criticality was chosen",
+  "confidence": "unsure" | "likely" | "confident",
+  "confidence_score": float between 0.0 and 1.0,
+  "confidence_reason": "one sentence explaining the confidence level",
   "post_urls": ["url1", "url2"],
   "media_urls": [{{"type": "image|video", "url": "..."}}],
   "location_source": "gemini",
@@ -397,8 +540,9 @@ Return a JSON array. Each object must have exactly these fields:
   "manpower_source": "gemini"
 }}
 
+If NO tweets pass the strict filtering, return an empty array [].
 Return ONLY valid JSON array, no markdown, no explanation.
-    """
+"""
 
     text      = call_gemini(prompt).replace("```json", "").replace("```", "").strip()
     clustered = json.loads(text)
@@ -439,6 +583,9 @@ def merge_incidents(clustered: list[dict], existing: list[dict], region_key: str
                 ("location_radius_km",       "location_source"),
                 ("casualties_estimate",      "casualties_source"),
                 ("manpower_needed_estimate", "manpower_source"),
+                ("criticality",        "criticality_source"),
+                ("confidence",         "confidence_source"),
+                ("confidence_score",   "confidence_source"),
             ]:
                 if inc.get(source_field) != "human_verified":
                     inc[field]        = c.get(field, inc.get(field))
@@ -446,13 +593,14 @@ def merge_incidents(clustered: list[dict], existing: list[dict], region_key: str
 
             post_count                 = len(inc["posts"])
             hours                      = hours_since(inc["time_of_incident"])
-            inc["criticality"]         = get_criticality(hours)
             inc["time_since_incident"] = f"{hours:.1f}h"
             inc["verification"]        = get_verification(post_count)
-            inc["casualties"]          = get_casualties_category(inc.get("casualties_estimate", 0))
-            inc["manpower_needed"]     = get_manpower_category(inc.get("manpower_needed_estimate", 0))
+            inc["casualties"] = get_casualties_category(inc.get("casualties_estimate") or 0)
+            inc["manpower_needed"] = get_manpower_category(inc.get("manpower_needed_estimate") or 0)
             inc["last_updated"]        = datetime.utcnow().isoformat()
-
+            # Only fall back to time-based criticality if Gemini didn't provide a reason
+            if not inc.get("criticality_reason"):
+                inc["criticality"]     = get_criticality(hours)
         else:
             new_id  = str(uuid.uuid4())
             hours   = hours_since(c.get("time_of_incident", datetime.utcnow().isoformat()))
@@ -465,20 +613,25 @@ def merge_incidents(clustered: list[dict], existing: list[dict], region_key: str
                 "summary":                  c.get("summary", ""),
                 "time_of_incident":         c.get("time_of_incident", datetime.utcnow().isoformat()),
                 "time_since_incident":      f"{hours:.1f}h",
-                "criticality":              get_criticality(hours),
                 "location_centre":          c.get("location_centre", center),
                 "location_radius_km":       c.get("location_radius_km", 0.5),
                 "location_source":          "gemini",
                 "casualties_estimate":      c.get("casualties_estimate", 0),
-                "casualties":               get_casualties_category(c.get("casualties_estimate", 0)),
+                "casualties":               get_casualties_category(c.get("casualties_estimate") or 0),
                 "casualties_source":        "gemini",
                 "manpower_needed_estimate": c.get("manpower_needed_estimate", 0),
-                "manpower_needed":          get_manpower_category(c.get("manpower_needed_estimate", 0)),
+                "manpower_needed":          get_manpower_category(c.get("manpower_needed_estimate") or 0),
                 "manpower_source":          "gemini",
                 "verification":             get_verification(len(posts)),
                 "posts":                    posts,
                 "media":                    c.get("media_urls", []),
                 "last_updated":             datetime.utcnow().isoformat(),
+                "time_source":          c.get("time_source", "post_timestamp"),
+                "criticality":          c.get("criticality", get_criticality(hours)),
+                "criticality_reason":   c.get("criticality_reason", ""),
+                "confidence":           c.get("confidence", "unsure"),
+                "confidence_score":     c.get("confidence_score", 0.0),
+                "confidence_reason":    c.get("confidence_reason", ""),
             }
             incidents[new_id] = inc
             print(f"  ✅ New incident: {inc['summary'][:60]}...")
@@ -490,7 +643,9 @@ def refresh_time_fields(incidents: list[dict]) -> list[dict]:
     for inc in incidents:
         hours = hours_since(inc["time_of_incident"])
         inc["time_since_incident"] = f"{hours:.1f}h"
-        inc["criticality"]         = get_criticality(hours)
+        # Only override criticality with time-based if Gemini didn't set a reason
+        if not inc.get("criticality_reason"):
+            inc["criticality"] = get_criticality(hours)
     return incidents
 
 # ── Process one region ─────────────────────────────────────────────────────────
@@ -529,7 +684,7 @@ async def process_region(region_key: str, page):
 # ── Main ──────────────────────────────────────────────────────────────────────
 async def main():
     # Add or remove regions here as needed
-    regions_to_run = ["gaza", "iran"]
+    regions_to_run = ["gaza", "iran", "ukraine"]
 
     print("=" * 60)
     print("🚨 Multi-Region Crisis Incident Tracker")
@@ -542,17 +697,11 @@ async def main():
             user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
         )
 
-        with open("x_cookies.json") as f:
-            cookies = json.load(f)
-        await context.add_cookies(cookies)
-
         page = await context.new_page()
         print("\n⏳ Loading X...")
-        await page.goto("https://x.com/home")
-        await page.wait_for_timeout(3000)
 
-        if "login" in page.url:
-            print("❌ Cookies expired — re-run get_cookies.py")
+        if not await load_session(context, page):
+            print("❌ All cookie files expired — re-run get_cookies.py")
             await browser.close()
             return
 

@@ -1,0 +1,458 @@
+[
+  {
+    "incident_id": "b3d8827c-9c1d-4918-937e-93650e666192",
+    "region": "ukraine",
+    "summary": "Rescuers in Sumy were targeted by a secondary enemy strike while assessing damage from a previous impact, though no new casualties were reported from this specific incident.",
+    "time_of_incident": "2026-03-22T06:34:21.000Z",
+    "time_since_incident": "1.8h",
+    "criticality": "critical",
+    "location_centre": {
+      "lat": 50.9,
+      "lon": 34.78
+    },
+    "location_radius_km": 5.0,
+    "location_source": "gemini",
+    "casualties_estimate": 0,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 0,
+    "manpower_needed": "small",
+    "manpower_source": "gemini",
+    "verification": "confident",
+    "posts": [
+      "https://x.com/prm_ua/status/2035605986782642290",
+      "https://x.com/UKRINFORM/status/2035616763870691669",
+      "https://x.com/korkinoleh/status/2035628343299555644",
+      "https://x.com/glavnoe_ua/status/2035621806502248873"
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD_s2ezWwAAyjMQ?format=jpg&name=small"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD_s2fUa4AAYi7v?format=jpg&name=small"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HEABMMcbYAAuynj?format=jpg&name=small"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD_2p5gaoAAf8GS?format=jpg&name=small"
+      }
+    ],
+    "last_updated": "2026-03-22T08:23:03.653910",
+    "criticality_source": "gemini",
+    "confidence": "confident",
+    "confidence_source": "gemini",
+    "confidence_score": 0.9
+  },
+  {
+    "incident_id": "df90821e-efbd-486f-979d-f784f6843f2c",
+    "region": "ukraine",
+    "summary": "Five people, including two children, were injured, and private houses and infrastructure were damaged in an attack on Nikopol, Dnipropetrovsk Oblast.",
+    "time_of_incident": "2026-03-22T05:34:11.000Z",
+    "time_since_incident": "2.8h",
+    "criticality": "critical",
+    "location_centre": {
+      "lat": 47.57,
+      "lon": 34.38
+    },
+    "location_radius_km": 2.0,
+    "location_source": "gemini",
+    "casualties_estimate": 5,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 10,
+    "manpower_needed": "moderate",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/hWLpKOhua6U0PAU/status/2035590845563334768"
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD_er7gXEAAGOFC?format=jpg&name=360x360"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD_expqXEAAEpB0?format=jpg&name=360x360"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD_e3YMXMAA3B8y?format=jpg&name=360x360"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD_fAvLbMAAjF2-?format=jpg&name=360x360"
+      }
+    ],
+    "last_updated": "2026-03-22T06:59:14.111405"
+  },
+  {
+    "incident_id": "23ca6288-ed1e-4d4d-989d-529aa5679a58",
+    "region": "ukraine",
+    "summary": "Two men were killed in an attack in Synelnykove Raion, Dnipropetrovsk Oblast.",
+    "time_of_incident": "2026-03-22T05:34:11.000Z",
+    "time_since_incident": "2.8h",
+    "criticality": "critical",
+    "location_centre": {
+      "lat": 48.3,
+      "lon": 35.5
+    },
+    "location_radius_km": 5.0,
+    "location_source": "gemini",
+    "casualties_estimate": 2,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 5,
+    "manpower_needed": "moderate",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/hWLpKOhua6U0PAU/status/2035590845563334768"
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD_er7gXEAAGOFC?format=jpg&name=360x360"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD_expqXEAAEpB0?format=jpg&name=360x360"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD_e3YMXMAA3B8y?format=jpg&name=360x360"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD_fAvLbMAAjF2-?format=jpg&name=360x360"
+      }
+    ],
+    "last_updated": "2026-03-22T06:59:14.111430"
+  },
+  {
+    "incident_id": "ea244b74-4b14-477f-ad50-373ecff175c9",
+    "region": "ukraine",
+    "summary": "Two soldiers of the 47th Separate Mechanized Brigade, 'Chak' and 'Sych', were trapped under rubble in a collapsed dugout for 4 days after an FPV drone strike on the Northern-Slobozhansky direction, with at least one confirmed rescued.",
+    "time_of_incident": "2026-03-20T15:09:26.000Z",
+    "time_since_incident": "41.2h",
+    "criticality": "needs_support",
+    "location_centre": {
+      "lat": 48.5,
+      "lon": 31.5
+    },
+    "location_radius_km": 100.0,
+    "location_source": "gemini",
+    "casualties_estimate": 0,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 0,
+    "manpower_needed": "small",
+    "manpower_source": "gemini",
+    "verification": "confident",
+    "posts": [
+      "https://x.com/KT612078832930/status/2035473376752410964",
+      "https://x.com/HromadskeRadio/status/2035010835303555452",
+      "https://x.com/KT612078832930/status/2035482400201863514",
+      "https://x.com/tNfVcLoqJkrOvMi/status/2035328576380100631"
+    ],
+    "media": [],
+    "last_updated": "2026-03-22T08:23:03.653980",
+    "criticality_source": "gemini",
+    "confidence": "confident",
+    "confidence_source": "gemini",
+    "confidence_score": 0.8
+  },
+  {
+    "incident_id": "a73d6b5a-ad49-405f-8772-13822332fbde",
+    "region": "ukraine",
+    "summary": "A drone attacked the main SBU office in Lviv Oblast, causing damage to the building.",
+    "time_of_incident": "2026-03-19T06:22:00.000Z",
+    "time_since_incident": "74.0h",
+    "criticality": "cleanup",
+    "location_centre": {
+      "lat": 49.84,
+      "lon": 24.03
+    },
+    "location_radius_km": 0.1,
+    "location_source": "gemini",
+    "casualties_estimate": 0,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 5,
+    "manpower_needed": "moderate",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/kyiv_tv/status/2034515713675633036"
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HDwJV8tW0AAsA_k?format=jpg&name=small"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HDwJV9UboAAY2O8?format=jpg&name=360x360"
+      }
+    ],
+    "last_updated": "2026-03-22T06:59:14.111482"
+  },
+  {
+    "incident_id": "a099a49f-813c-4818-baae-1eb885e2cc46",
+    "region": "ukraine",
+    "summary": "Three people were injured and two multi-story buildings were damaged in Odesa following an attack.",
+    "time_of_incident": "2026-03-19T06:22:00.000Z",
+    "time_since_incident": "74.0h",
+    "criticality": "cleanup",
+    "location_centre": {
+      "lat": 46.48,
+      "lon": 30.73
+    },
+    "location_radius_km": 0.5,
+    "location_source": "gemini",
+    "casualties_estimate": 3,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 15,
+    "manpower_needed": "moderate",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/kyiv_tv/status/2034515713675633036"
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HDwJV8tW0AAsA_k?format=jpg&name=small"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HDwJV9UboAAY2O8?format=jpg&name=360x360"
+      }
+    ],
+    "last_updated": "2026-03-22T06:59:14.111502"
+  },
+  {
+    "incident_id": "daf12c43-f81d-4f7e-b990-94e01011c230",
+    "region": "ukraine",
+    "summary": "Rescuers in Druzhkivka successfully saved a resident from a multi-story building after an attack.",
+    "time_of_incident": "2026-03-21T09:23:55.000Z",
+    "time_since_incident": "23.0h",
+    "criticality": "critical",
+    "location_centre": {
+      "lat": 48.62,
+      "lon": 37.55
+    },
+    "location_radius_km": 0.5,
+    "location_source": "gemini",
+    "casualties_estimate": 0,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 10,
+    "manpower_needed": "moderate",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/kraminfo/status/2035286271237431723"
+    ],
+    "media": [],
+    "last_updated": "2026-03-22T06:59:14.111521"
+  },
+  {
+    "incident_id": "aef4e059-f638-4d7a-9a28-5c5a0f9fbd3c",
+    "region": "ukraine",
+    "summary": "Russians hit a critical infrastructure facility in Zaporizhzhia's Khortytskyi district with two Shahed drones, causing a fire which rescuers quickly extinguished, and blowing out windows in nearby infrastructure; drone debris also fell in a yard in Zaporizhzhia.",
+    "time_of_incident": "2026-03-21T16:28:25.000Z",
+    "time_since_incident": "15.9h",
+    "location_centre": {
+      "lat": 47.83,
+      "lon": 35.17
+    },
+    "location_radius_km": 10.0,
+    "location_source": "gemini",
+    "casualties_estimate": 0,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 0,
+    "manpower_needed": "small",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/UA__oleg/status/2035420459915755972",
+      "https://x.com/kyiv_tv/status/2035393101951316146"
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD9EFJIWMAE312K?format=jpg&name=360x360"
+      }
+    ],
+    "last_updated": "2026-03-22T08:23:03.654182",
+    "time_source": "post_timestamp",
+    "criticality": "cleanup",
+    "criticality_reason": "Fire was quickly extinguished and only infrastructure damage and debris fall are reported, with no casualties mentioned.",
+    "confidence": "confident",
+    "confidence_score": 0.8,
+    "confidence_reason": "Multiple tweets corroborate a drone attack with specific impact type, location, and emergency response."
+  },
+  {
+    "incident_id": "9c6d05a8-078f-4675-aeea-57da360a9d07",
+    "region": "ukraine",
+    "summary": "A fire broke out in a non-residential building in central Kherson due to an enemy drone hit, which rescuers quickly extinguished, with no casualties reported according to the State Emergency Service.",
+    "time_of_incident": "2026-03-21T17:36:56.000Z",
+    "time_since_incident": "14.8h",
+    "location_centre": {
+      "lat": 46.63,
+      "lon": 32.61
+    },
+    "location_radius_km": 5.0,
+    "location_source": "gemini",
+    "casualties_estimate": 0,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 0,
+    "manpower_needed": "small",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/pogrebeckij/status/2035410344059769087"
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD85vAGacAAB4di?format=jpg&name=360x360"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD85vANbIAAxrkn?format=jpg&name=360x360"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD85vATbQAAbD0f?format=jpg&name=360x360"
+      }
+    ],
+    "last_updated": "2026-03-22T08:23:03.654223",
+    "time_source": "post_timestamp",
+    "criticality": "cleanup",
+    "criticality_reason": "Fire was quickly extinguished and no casualties were reported by DSNS.",
+    "confidence": "confident",
+    "confidence_score": 0.9,
+    "confidence_reason": "The incident is reported by DSNS, specifying location, cause, response, and casualty status."
+  },
+  {
+    "incident_id": "b8cfd7f2-0936-4607-9ebc-a61ea1eaecb0",
+    "region": "ukraine",
+    "summary": "Rescuers extinguished a number of fires in Sloviansk and Kramatorsk, Donetsk Oblast, following enemy shelling.",
+    "time_of_incident": "2026-03-21T12:12:02.000Z",
+    "time_since_incident": "20.2h",
+    "location_centre": {
+      "lat": 48.79,
+      "lon": 37.585
+    },
+    "location_radius_km": 15.0,
+    "location_source": "gemini",
+    "casualties_estimate": 0,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 0,
+    "manpower_needed": "small",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/kraminfo/status/2035328577554571772"
+    ],
+    "media": [],
+    "last_updated": "2026-03-22T08:23:03.654247",
+    "time_source": "post_timestamp",
+    "criticality": "cleanup",
+    "criticality_reason": "Rescuers have already extinguished the fires, indicating the immediate danger is resolved.",
+    "confidence": "likely",
+    "confidence_score": 0.6,
+    "confidence_reason": "The tweet names specific cities and emergency response, but lacks casualty details or specific building types."
+  },
+  {
+    "incident_id": "d699284f-edd8-47e1-88cd-f23dc14bf14f",
+    "region": "ukraine",
+    "summary": "Rescuers and medics attempted to resuscitate a man at a fire site in Sumy.",
+    "time_of_incident": "2026-03-21T10:30:42.000Z",
+    "time_since_incident": "21.9h",
+    "location_centre": {
+      "lat": 50.9,
+      "lon": 34.78
+    },
+    "location_radius_km": 5.0,
+    "location_source": "gemini",
+    "casualties_estimate": 1,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 0,
+    "manpower_needed": "small",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/antikorua/status/2035303075703857346"
+    ],
+    "media": [],
+    "last_updated": "2026-03-22T08:23:03.654268",
+    "time_source": "post_timestamp",
+    "criticality": "cleanup",
+    "criticality_reason": "The tweet describes an action already taken (attempted resuscitation), not an ongoing crisis or search.",
+    "confidence": "likely",
+    "confidence_score": 0.7,
+    "confidence_reason": "Specific location, type of incident (fire), and emergency service involvement with a casualty."
+  },
+  {
+    "incident_id": "ab91fff5-c3b9-4031-aca6-e2f6e4287d67",
+    "region": "ukraine",
+    "summary": "A non-residential building in Bilozirka village, Kherson Raion, caught fire following an enemy artillery strike yesterday evening, which rescuers extinguished, working under risk of repeat attacks, with no casualties.",
+    "time_of_incident": "2026-03-20T18:00:00.000Z",
+    "time_since_incident": "38.4h",
+    "location_centre": {
+      "lat": 46.68,
+      "lon": 32.55
+    },
+    "location_radius_km": 5.0,
+    "location_source": "gemini",
+    "casualties_estimate": 0,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 0,
+    "manpower_needed": "small",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/most_ks_ua/status/2035283040864260258"
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD7HIyYWkAAZ1tW?format=jpg&name=360x360"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD7HIy7bYAACSOd?format=jpg&name=360x360"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD7HIy3aIAAWwVc?format=jpg&name=360x360"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD7HIyvbUAAmWiv?format=jpg&name=360x360"
+      }
+    ],
+    "last_updated": "2026-03-22T08:23:03.654290",
+    "time_source": "mentioned_in_tweet",
+    "criticality": "cleanup",
+    "criticality_reason": "The fire was extinguished and no casualties were reported, indicating the immediate crisis is over.",
+    "confidence": "confident",
+    "confidence_score": 0.9,
+    "confidence_reason": "Reported by DSNS with specific location, cause, rescue activity, and casualty status."
+  }
+]

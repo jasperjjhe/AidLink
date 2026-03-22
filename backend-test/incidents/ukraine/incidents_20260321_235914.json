@@ -1,0 +1,247 @@
+[
+  {
+    "incident_id": "b3d8827c-9c1d-4918-937e-93650e666192",
+    "region": "ukraine",
+    "summary": "Rescuers in Sumy were targeted by a secondary enemy strike while assessing damage from a previous impact, though no new casualties were reported from this specific incident.",
+    "time_of_incident": "2026-03-22T06:34:21.000Z",
+    "time_since_incident": "0.4h",
+    "criticality": "critical",
+    "location_centre": {
+      "lat": 50.9,
+      "lon": 34.78
+    },
+    "location_radius_km": 0.5,
+    "location_source": "gemini",
+    "casualties_estimate": 0,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 5,
+    "manpower_needed": "moderate",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/prm_ua/status/2035605986782642290"
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD_s2ezWwAAyjMQ?format=jpg&name=small"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD_s2fUa4AAYi7v?format=jpg&name=small"
+      }
+    ],
+    "last_updated": "2026-03-22T06:59:14.111360"
+  },
+  {
+    "incident_id": "df90821e-efbd-486f-979d-f784f6843f2c",
+    "region": "ukraine",
+    "summary": "Five people, including two children, were injured, and private houses and infrastructure were damaged in an attack on Nikopol, Dnipropetrovsk Oblast.",
+    "time_of_incident": "2026-03-22T05:34:11.000Z",
+    "time_since_incident": "1.4h",
+    "criticality": "critical",
+    "location_centre": {
+      "lat": 47.57,
+      "lon": 34.38
+    },
+    "location_radius_km": 2.0,
+    "location_source": "gemini",
+    "casualties_estimate": 5,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 10,
+    "manpower_needed": "moderate",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/hWLpKOhua6U0PAU/status/2035590845563334768"
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD_er7gXEAAGOFC?format=jpg&name=360x360"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD_expqXEAAEpB0?format=jpg&name=360x360"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD_e3YMXMAA3B8y?format=jpg&name=360x360"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD_fAvLbMAAjF2-?format=jpg&name=360x360"
+      }
+    ],
+    "last_updated": "2026-03-22T06:59:14.111405"
+  },
+  {
+    "incident_id": "23ca6288-ed1e-4d4d-989d-529aa5679a58",
+    "region": "ukraine",
+    "summary": "Two men were killed in an attack in Synelnykove Raion, Dnipropetrovsk Oblast.",
+    "time_of_incident": "2026-03-22T05:34:11.000Z",
+    "time_since_incident": "1.4h",
+    "criticality": "critical",
+    "location_centre": {
+      "lat": 48.3,
+      "lon": 35.5
+    },
+    "location_radius_km": 5.0,
+    "location_source": "gemini",
+    "casualties_estimate": 2,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 5,
+    "manpower_needed": "moderate",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/hWLpKOhua6U0PAU/status/2035590845563334768"
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD_er7gXEAAGOFC?format=jpg&name=360x360"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD_expqXEAAEpB0?format=jpg&name=360x360"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD_e3YMXMAA3B8y?format=jpg&name=360x360"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HD_fAvLbMAAjF2-?format=jpg&name=360x360"
+      }
+    ],
+    "last_updated": "2026-03-22T06:59:14.111430"
+  },
+  {
+    "incident_id": "ea244b74-4b14-477f-ad50-373ecff175c9",
+    "region": "ukraine",
+    "summary": "Two soldiers of the 47th Separate Mechanized Brigade, 'Chak' and 'Sych', were trapped under rubble in a collapsed dugout for 4 days after an FPV drone strike on the Northern-Slobozhansky direction, with at least one confirmed rescued.",
+    "time_of_incident": "2026-03-20T15:09:26.000Z",
+    "time_since_incident": "39.8h",
+    "criticality": "needs_support",
+    "location_centre": {
+      "lat": 48.5,
+      "lon": 31.5
+    },
+    "location_radius_km": 10.0,
+    "location_source": "gemini",
+    "casualties_estimate": 0,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 10,
+    "manpower_needed": "moderate",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/KT612078832930/status/2035473376752410964",
+      "https://x.com/HromadskeRadio/status/2035010835303555452",
+      "https://x.com/KT612078832930/status/2035482400201863514"
+    ],
+    "media": [],
+    "last_updated": "2026-03-22T06:59:14.111452"
+  },
+  {
+    "incident_id": "a73d6b5a-ad49-405f-8772-13822332fbde",
+    "region": "ukraine",
+    "summary": "A drone attacked the main SBU office in Lviv Oblast, causing damage to the building.",
+    "time_of_incident": "2026-03-19T06:22:00.000Z",
+    "time_since_incident": "72.6h",
+    "criticality": "cleanup",
+    "location_centre": {
+      "lat": 49.84,
+      "lon": 24.03
+    },
+    "location_radius_km": 0.1,
+    "location_source": "gemini",
+    "casualties_estimate": 0,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 5,
+    "manpower_needed": "moderate",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/kyiv_tv/status/2034515713675633036"
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HDwJV8tW0AAsA_k?format=jpg&name=small"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HDwJV9UboAAY2O8?format=jpg&name=360x360"
+      }
+    ],
+    "last_updated": "2026-03-22T06:59:14.111482"
+  },
+  {
+    "incident_id": "a099a49f-813c-4818-baae-1eb885e2cc46",
+    "region": "ukraine",
+    "summary": "Three people were injured and two multi-story buildings were damaged in Odesa following an attack.",
+    "time_of_incident": "2026-03-19T06:22:00.000Z",
+    "time_since_incident": "72.6h",
+    "criticality": "cleanup",
+    "location_centre": {
+      "lat": 46.48,
+      "lon": 30.73
+    },
+    "location_radius_km": 0.5,
+    "location_source": "gemini",
+    "casualties_estimate": 3,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 15,
+    "manpower_needed": "moderate",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/kyiv_tv/status/2034515713675633036"
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HDwJV8tW0AAsA_k?format=jpg&name=small"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HDwJV9UboAAY2O8?format=jpg&name=360x360"
+      }
+    ],
+    "last_updated": "2026-03-22T06:59:14.111502"
+  },
+  {
+    "incident_id": "daf12c43-f81d-4f7e-b990-94e01011c230",
+    "region": "ukraine",
+    "summary": "Rescuers in Druzhkivka successfully saved a resident from a multi-story building after an attack.",
+    "time_of_incident": "2026-03-21T09:23:55.000Z",
+    "time_since_incident": "21.6h",
+    "criticality": "critical",
+    "location_centre": {
+      "lat": 48.62,
+      "lon": 37.55
+    },
+    "location_radius_km": 0.5,
+    "location_source": "gemini",
+    "casualties_estimate": 0,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 10,
+    "manpower_needed": "moderate",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/kraminfo/status/2035286271237431723"
+    ],
+    "media": [],
+    "last_updated": "2026-03-22T06:59:14.111521"
+  }
+]

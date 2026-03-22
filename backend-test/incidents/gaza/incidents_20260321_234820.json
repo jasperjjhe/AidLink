@@ -4,7 +4,7 @@
     "region": "gaza",
     "summary": "Reports indicate that people are trapped under rubble in North Gaza due to ongoing violent targeting, with a severe lack of ambulance, civil defense, or rescue teams available to respond.",
     "time_of_incident": "2024-10-26T18:11:37.000Z",
-    "time_since_incident": "12278.0h",
+    "time_since_incident": "12276.6h",
     "criticality": "cleanup",
     "location_centre": {
       "lat": 31.4,
@@ -30,7 +30,7 @@
     "region": "gaza",
     "summary": "Reports indicate that children are still trapped under rubble in Palestine, implicitly referring to the Gaza Strip.",
     "time_of_incident": "2026-03-22T05:16:19.000Z",
-    "time_since_incident": "3.0h",
+    "time_since_incident": "1.5h",
     "criticality": "critical",
     "location_centre": {
       "lat": 31.4,
@@ -115,7 +115,7 @@
     "region": "gaza",
     "summary": "A building in Gaza reportedly collapsed after being hit from the air, with witnesses describing the destruction as similar to 9/11.",
     "time_of_incident": "2026-03-20T20:48:35.000Z",
-    "time_since_incident": "35.4h",
+    "time_since_incident": "34.0h",
     "criticality": "needs_support",
     "location_centre": {
       "lat": 31.4,
@@ -142,7 +142,7 @@
     "region": "gaza",
     "summary": "Reports indicate a child was rescued from a collapsed building in Gaza, with other children also reported immobile due to similar collapses.",
     "time_of_incident": "2026-03-10T00:18:15.000Z",
-    "time_since_incident": "295.9h",
+    "time_since_incident": "294.5h",
     "criticality": "cleanup",
     "location_centre": {
       "lat": 31.4,
@@ -169,7 +169,7 @@
     "region": "gaza",
     "summary": "Gaza civil defense teams were captured in images conducting nighttime rescue operations, pulling at least one survivor from the rubble of a collapsed building after an airstrike.",
     "time_of_incident": "2026-03-01T07:17:44.000Z",
-    "time_since_incident": "504.9h",
+    "time_since_incident": "503.5h",
     "criticality": "cleanup",
     "location_centre": {
       "lat": 31.4,
@@ -199,7 +199,7 @@
     "region": "gaza",
     "summary": "Civil defense teams are continuing to search for the bodies of martyrs trapped under the rubble of a collapsed building in the Sheikh Radwan neighborhood of Gaza City, destroyed by Israeli bombing.",
     "time_of_incident": "2026-02-08T00:17:37.000Z",
-    "time_since_incident": "1015.9h",
+    "time_since_incident": "1014.5h",
     "criticality": "cleanup",
     "location_centre": {
       "lat": 31.52,
