@@ -1,0 +1,399 @@
+[
+  {
+    "incident_id": "67a718ca-76ef-4b4d-bedf-2f9bc2987b46",
+    "summary": "A wall of the Ribat College building collapsed onto displaced tents in Mawasi, Khan Yunis, killing 3 people including a 5-year-old child and injuring several others.",
+    "time_of_incident": "2026-03-16T04:16:12.000Z",
+    "time_since_incident": "143.2h",
+    "criticality": "cleanup",
+    "location_centre": {
+      "lat": 31.32,
+      "lon": 34.27
+    },
+    "location_radius_km": 0.5,
+    "location_source": "gemini",
+    "casualties_estimate": 3,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 15,
+    "manpower_needed": "moderate",
+    "manpower_source": "gemini",
+    "verification": "verified",
+    "posts": [
+      "https://x.com/PalestineDays/status/2033470999748890929",
+      "https://x.com/Talal81ibrahim/status/2033396893745557677",
+      "https://x.com/AohrUk_ar/status/2033545146826981441",
+      "https://x.com/HuDa_NaIm92/status/2033523473662791906",
+      "https://x.com/PalestineDays/status/2033445663166660636",
+      "https://x.com/qudspressagency/status/2033522051424624734",
+      "https://x.com/MahmoudMassri15/status/2033333670799368222",
+      "https://x.com/openeysdown/status/2033468004214702322",
+      "https://x.com/swilkinsonbc/status/2033460227090035121"
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HDiGr8WX0AABgw1?format=jpg&name=small"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HDiFg7DWEAACwht?format=png&name=small"
+      }
+    ],
+    "last_updated": "2026-03-22T03:27:47.702466"
+  },
+  {
+    "incident_id": "8e397286-d573-438d-a149-fb7f298b879d",
+    "summary": "A building collapsed in the Bir al-Na'aja area of Beit Lahia, Northern Gaza, due to heavy rain and wind, killing 5 people, with others still trapped under the rubble.",
+    "time_of_incident": "2025-12-12T08:29:02.000Z",
+    "time_since_incident": "2395.0h",
+    "criticality": "cleanup",
+    "location_centre": {
+      "lat": 31.55,
+      "lon": 34.48
+    },
+    "location_radius_km": 0.2,
+    "location_source": "gemini",
+    "casualties_estimate": 10,
+    "casualties": "some",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 25,
+    "manpower_needed": "large",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/abunael01/status/1999406283456135218",
+      "https://x.com/TVManar1/status/1999396182586474879",
+      "https://x.com/breakingnews_mt/status/1999396061207560356"
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/G79RargX0AY1XmU?format=jpg&name=small"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/G79RaswXYAQD6yb?format=jpg&name=small"
+      }
+    ],
+    "last_updated": "2026-03-22T03:10:25.226013"
+  },
+  {
+    "incident_id": "0f1064c4-53db-46c7-9be8-cd0b57d5dfdf",
+    "summary": "One person was killed due to a building collapse in Khan Yunis city.",
+    "time_of_incident": "2026-01-04T09:28:38.000Z",
+    "time_since_incident": "1842.0h",
+    "criticality": "cleanup",
+    "location_centre": {
+      "lat": 31.35,
+      "lon": 34.3
+    },
+    "location_radius_km": 0.1,
+    "location_source": "gemini",
+    "casualties_estimate": 1,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 10,
+    "manpower_needed": "moderate",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/AlkhaleejOnline/status/2007745982025421135"
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/G9zyUYiWgAAJ-Jd?format=jpg&name=small"
+      }
+    ],
+    "last_updated": "2026-03-22T03:10:25.226042"
+  },
+  {
+    "incident_id": "254f840b-3a36-444b-8b2f-bd570170facd",
+    "summary": "Three people died due to a building collapse in Gaza.",
+    "time_of_incident": "2026-01-13T13:56:50.000Z",
+    "time_since_incident": "1621.5h",
+    "criticality": "cleanup",
+    "location_centre": {
+      "lat": 31.4,
+      "lon": 34.35
+    },
+    "location_radius_km": 0.5,
+    "location_source": "gemini",
+    "casualties_estimate": 3,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 10,
+    "manpower_needed": "moderate",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/Al24Breaking/status/2011074964837818615"
+    ],
+    "media": [],
+    "last_updated": "2026-03-22T03:27:47.702530"
+  },
+  {
+    "incident_id": "25be19b0-e75a-4141-b211-e10fcc90cb0d",
+    "summary": "One person died and another was injured due to a building collapse in Gaza, raising the total number of collapse-related fatalities since the start of winter to 25.",
+    "time_of_incident": "2026-01-14T12:01:34.000Z",
+    "time_since_incident": "1599.4h",
+    "criticality": "cleanup",
+    "location_centre": {
+      "lat": 31.4,
+      "lon": 34.35
+    },
+    "location_radius_km": 0.5,
+    "location_source": "gemini",
+    "casualties_estimate": 1,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 5,
+    "manpower_needed": "moderate",
+    "manpower_source": "gemini",
+    "verification": "confident",
+    "posts": [
+      "https://x.com/AlHudhudmag/status/2011448148489855461",
+      "https://x.com/TanasuhTV/status/2011408347816251877",
+      "https://x.com/honaalaalamnews/status/2011420112457519134",
+      "https://x.com/SadeedNet/status/2011413645297901818"
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/G-oZYmlbgAAbHhU?format=jpg&name=small"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/G-n1OfjWoAA6ohc?format=jpg&name=small"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/G-n_7SkaIAE8X1A?format=jpg&name=small"
+      }
+    ],
+    "last_updated": "2026-03-22T03:27:47.702515"
+  },
+  {
+    "incident_id": "dc333a9f-93e5-4287-b25d-0c31a65484b7",
+    "summary": "A child was killed in Gaza due to the collapse of a damaged building wall.",
+    "time_of_incident": "2026-03-18T21:25:12.000Z",
+    "time_since_incident": "78.0h",
+    "criticality": "cleanup",
+    "location_centre": {
+      "lat": 31.4,
+      "lon": 34.35
+    },
+    "location_radius_km": 0.5,
+    "location_source": "gemini",
+    "casualties_estimate": 1,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 5,
+    "manpower_needed": "moderate",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/itsshala8/status/2034430391000387781",
+      "https://x.com/athar309/status/2034380626321662326"
+    ],
+    "media": [],
+    "last_updated": "2026-03-22T03:17:52.450851"
+  },
+  {
+    "incident_id": "0d144e4b-7b7e-49ff-9ec6-40e5ef8b23a4",
+    "summary": "A small innocent child was trapped beneath the rubble after a building collapse in Gaza.",
+    "time_of_incident": "2026-02-07T20:52:48.000Z",
+    "time_since_incident": "1014.6h",
+    "criticality": "cleanup",
+    "location_centre": {
+      "lat": 31.4,
+      "lon": 34.35
+    },
+    "location_radius_km": 0.5,
+    "location_source": "gemini",
+    "casualties_estimate": 2,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 10,
+    "manpower_needed": "moderate",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/shameensuleman/status/2020290889638150149",
+      "https://x.com/EsreffKuscubasi/status/2020239345060573514"
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HAmD2n-WoAERkUb?format=jpg&name=360x360"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HAmD2oiacAEsgjF?format=jpg&name=360x360"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HAmD2oMWkAAo98w?format=jpg&name=360x360"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HAmD2oHXUAEhoJy?format=jpg&name=360x360"
+      }
+    ],
+    "last_updated": "2026-03-22T03:27:47.702495"
+  },
+  {
+    "incident_id": "868f58a2-3575-4d3c-8a1d-ffa79acbe14d",
+    "summary": "A three-story residential building collapsed in the northern Gaza Strip, trapping children and women under the rubble, possibly due to a winter storm.",
+    "time_of_incident": "2025-12-22T09:36:07.000Z",
+    "time_since_incident": "2153.9h",
+    "criticality": "cleanup",
+    "location_centre": {
+      "lat": 31.52,
+      "lon": 34.46
+    },
+    "location_radius_km": 0.1,
+    "location_source": "gemini",
+    "casualties_estimate": 5,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 25,
+    "manpower_needed": "large",
+    "manpower_source": "gemini",
+    "verification": "verified",
+    "posts": [
+      "https://x.com/iamsakibali1/status/2003036823057265005",
+      "https://x.com/AlArabiya/status/2002668868448227413",
+      "https://x.com/AlarabyTV/status/2002641502002933764",
+      "https://x.com/qudsn/status/2002707147067720021",
+      "https://x.com/grok/status/2003705874565464065",
+      "https://x.com/AlQastalps/status/2002668281401135236",
+      "https://x.com/qudsn/status/2002676113064304723",
+      "https://x.com/AnasAlSharif0/status/2002605010300121437",
+      "https://x.com/yaffa_ps/status/2002668039888929037",
+      "https://x.com/iamsakibali1/status/2003084484368007633",
+      "https://x.com/AlArabiya/status/2002566725267595419"
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/G8rn9r0W4AAOiEH?format=jpg&name=small"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/G8rP1H5XYAE5iJY.jpg"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/G8qL0n5WoAAHwpU.jpg"
+      }
+    ],
+    "last_updated": "2026-03-22T03:27:47.702546"
+  },
+  {
+    "incident_id": "ec8f3ed3-97c4-4585-9431-c2921d61b910",
+    "summary": "A building collapsed in Gaza, killing 5 people, possibly due to winter storms, as reported on January 13, 2026, referring to an incident from the previous day.",
+    "time_of_incident": "2026-01-12T12:00:00.000Z",
+    "time_since_incident": "1647.5h",
+    "criticality": "cleanup",
+    "location_centre": {
+      "lat": 31.4,
+      "lon": 34.35
+    },
+    "location_radius_km": 0.5,
+    "location_source": "gemini",
+    "casualties_estimate": 5,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 15,
+    "manpower_needed": "moderate",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/theIMEU/status/2011170133788803152"
+    ],
+    "media": [],
+    "last_updated": "2026-03-22T03:27:47.702700"
+  },
+  {
+    "incident_id": "676c1b78-f3c9-4f4c-a567-7e80c3392fe0",
+    "summary": "Four people were killed after a building wall collapsed in Gaza due to heavy rain and strong winds.",
+    "time_of_incident": "2026-01-13T14:00:02.000Z",
+    "time_since_incident": "1621.5h",
+    "criticality": "cleanup",
+    "location_centre": {
+      "lat": 31.4,
+      "lon": 34.35
+    },
+    "location_radius_km": 0.5,
+    "location_source": "gemini",
+    "casualties_estimate": 4,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 12,
+    "manpower_needed": "moderate",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/AJEnglish/status/2011075770186137959"
+    ],
+    "media": [],
+    "last_updated": "2026-03-22T03:27:47.702735"
+  },
+  {
+    "incident_id": "155c985e-452a-4781-82fb-d12034449033",
+    "summary": "Approximately 60 people, primarily women and children, are missing under the rubble of a residential building destroyed by Israeli airstrikes near Samer Junction, west of Gaza City.",
+    "time_of_incident": "2025-09-22T11:54:17.000Z",
+    "time_since_incident": "4335.6h",
+    "criticality": "cleanup",
+    "location_centre": {
+      "lat": 31.503,
+      "lon": 34.453
+    },
+    "location_radius_km": 0.5,
+    "location_source": "gemini",
+    "casualties_estimate": 60,
+    "casualties": "many",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 70,
+    "manpower_needed": "large",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/Palestine1news/status/1970094298428555579",
+      "https://x.com/EngHafez189/status/1970094679875018961"
+    ],
+    "media": [],
+    "last_updated": "2026-03-22T03:27:47.702758"
+  },
+  {
+    "incident_id": "e2d6b3a1-b60a-4d05-85ca-ad699b3d0391",
+    "summary": "An Israeli airstrike destroyed a residential building in Gaza, with families reported trapped under the rubble.",
+    "time_of_incident": "2025-09-15T03:36:39.000Z",
+    "time_since_incident": "4511.9h",
+    "criticality": "cleanup",
+    "location_centre": {
+      "lat": 31.4,
+      "lon": 34.35
+    },
+    "location_radius_km": 0.5,
+    "location_source": "gemini",
+    "casualties_estimate": 8,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 20,
+    "manpower_needed": "large",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/Ghaznavii_News/status/1967432348200239577"
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/G025S2gWwAACChg?format=jpg&name=small"
+      }
+    ],
+    "last_updated": "2026-03-22T03:27:47.702780"
+  }
+]

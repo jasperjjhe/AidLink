@@ -1,0 +1,246 @@
+{
+  "generated_at": "2026-03-22T01:59:07.578068",
+  "total_scraped": 50,
+  "rescue_requests": 14,
+  "data": [
+    {
+      "text": "4 days of 0 donations,Ahmed& \nfamily got 1 donation from a kind \nsoul,With injuries he’s unable to\nwork,this link is his only lifeline\nWhile every donation is a blessing \nmore help is needed\n\nPlease donate to Ahmed/family \nIt’s urgent we helpThank U",
+      "timestamp": "2026-03-22T00:21:42.000Z",
+      "query_used": "(trapped OR stuck OR \"need help\" OR rescue OR urgent OR evacuation OR محاصر OR عالق OR إنقاذ OR إجلاء) (Gaza OR غزة) -is:retweet min_faves:5",
+      "scraped_at": "2026-03-22T01:57:04.565321",
+      "index": 1,
+      "is_rescue_request": true,
+      "urgency": "critical",
+      "needs": [
+        "donations",
+        "financial aid"
+      ],
+      "location_mentions": [],
+      "language": "en",
+      "summary": "Ahmed and his injured family urgently need donations as they have received almost no support for four days, leaving him unable to work and their situation critical."
+    },
+    {
+      "text": " INTERNATIONAL MUTUAL AID LIST\nPlease share if you can.\n\n PHILIPPINES – URGENT\n\n@jujupaupau\n – $2,000 chemo bill for mom + $100 for food \n\n⸻\n\n UNITED STATES\n\n\n@hooraydhd\n (lunabluhma) – $3,542.91 – Urgent bills (power shut-off notice)\n\n@PenGwenWithLC\n – see profile!",
+      "timestamp": "2026-03-21T21:58:08.000Z",
+      "query_used": "(trapped OR stuck OR \"need help\" OR rescue OR urgent OR evacuation OR محاصر OR عالق OR إنقاذ OR إجلاء) (Gaza OR غزة) -is:retweet min_faves:5",
+      "scraped_at": "2026-03-22T01:57:06.613425",
+      "index": 7,
+      "is_rescue_request": true,
+      "urgency": "critical",
+      "needs": [
+        "donations",
+        "medical",
+        "food",
+        "financial aid"
+      ],
+      "location_mentions": [
+        "Philippines",
+        "United States"
+      ],
+      "language": "en",
+      "summary": "This is an urgent international mutual aid list requesting donations for individuals in the Philippines needing funds for chemotherapy and food, and in the United States for urgent bills like power shut-off notices."
+    },
+    {
+      "text": "Emergency In Israel. \n\nIsraelis are trapped under the rubble in Arad, and the Red Star of David is calling for people to head to hospitals and donate blood.” \n\n-Hebrew Media\n\nStop a bomb on the hospital like they did it on Gaza.",
+      "timestamp": "2026-03-21T21:53:12.000Z",
+      "query_used": "(trapped OR stuck OR \"need help\" OR rescue OR urgent OR evacuation OR محاصر OR عالق OR إنقاذ OR إجلاء) (Gaza OR غزة) -is:retweet min_faves:5",
+      "scraped_at": "2026-03-22T01:57:06.629135",
+      "index": 9,
+      "is_rescue_request": true,
+      "urgency": "critical",
+      "needs": [
+        "rescue",
+        "medical",
+        "blood donations"
+      ],
+      "location_mentions": [
+        "Israel",
+        "Arad",
+        "Gaza"
+      ],
+      "language": "en",
+      "summary": "An emergency in Arad, Israel, has people trapped under rubble, and the Red Star of David is urgently calling for blood donations at hospitals, while the tweet warns against bombing hospitals as seen in Gaza."
+    },
+    {
+      "text": "These tears are not weakness… they are the weight of very hard days.\nToday I was cooking over a small fire just to feed my family, because we barely have any food left.\nThe war has taken everything from us, and all we have now is hope in kind hearts.\n Link in bio ",
+      "timestamp": "2026-03-21T23:57:54.000Z",
+      "query_used": "(food OR water OR medical OR \"aid needed\" OR supplies OR طعام OR ماء OR دواء OR مستشفى OR جريح) (Gaza OR غزة) -is:retweet min_replies:2",
+      "scraped_at": "2026-03-22T01:57:15.664669",
+      "index": 4,
+      "is_rescue_request": true,
+      "urgency": "high",
+      "needs": [
+        "food"
+      ],
+      "location_mentions": [],
+      "language": "en",
+      "summary": "The speaker describes the hardship of barely having food and cooking over a fire due to the war, expressing hope for support from others."
+    },
+    {
+      "text": "My name is Maha from Gaza. I live with my family in a tent after losing our home. Our only wish is shelter and food \n\nWe need your support—any help makes a real difference.",
+      "timestamp": "2026-03-21T23:51:45.000Z",
+      "query_used": "(food OR water OR medical OR \"aid needed\" OR supplies OR طعام OR ماء OR دواء OR مستشفى OR جريح) (Gaza OR غزة) -is:retweet min_replies:2",
+      "scraped_at": "2026-03-22T01:57:15.669690",
+      "index": 5,
+      "is_rescue_request": true,
+      "urgency": "critical",
+      "needs": [
+        "shelter",
+        "food"
+      ],
+      "location_mentions": [
+        "Gaza"
+      ],
+      "language": "en",
+      "summary": "Maha from Gaza, living in a tent after losing her home, is requesting support for shelter and food for her family."
+    },
+    {
+      "text": "After Eid, I’m officially a student-clinician treating real patients at my uni in Gaza! I’m waiving all patient fees, but tuition & dental supplies add up fast!!\nI’m looking for a little help to cover the overhead so I can focus on healing smiles!\n\nhttp://\nko-fi.com/dentistlayla",
+      "timestamp": "2026-03-21T21:34:52.000Z",
+      "query_used": "(food OR water OR medical OR \"aid needed\" OR supplies OR طعام OR ماء OR دواء OR مستشفى OR جريح) (Gaza OR غزة) -is:retweet min_replies:2",
+      "scraped_at": "2026-03-22T01:57:17.680606",
+      "index": 6,
+      "is_rescue_request": true,
+      "urgency": "medium",
+      "needs": [
+        "financial_aid",
+        "medical_supplies"
+      ],
+      "location_mentions": [
+        "Gaza"
+      ],
+      "language": "en",
+      "summary": "A student-clinician in Gaza is requesting financial help to cover tuition and dental supplies so they can continue treating patients for free."
+    },
+    {
+      "text": "Hello my friends,how are you? Happy Eid! I'm very sad,my friends. My father and brother are in very bad condition they are in a lot of pain. Please, my friends, help me buy medicine for my father and brother,and please help me buy food as well.Please \nhttps://\nchuffed.org/project/137192\n-help-muhammad-survive-the-gaza-genocide\n…",
+      "timestamp": "2026-03-21T21:30:17.000Z",
+      "query_used": "(food OR water OR medical OR \"aid needed\" OR supplies OR طعام OR ماء OR دواء OR مستشفى OR جريح) (Gaza OR غزة) -is:retweet min_replies:2",
+      "scraped_at": "2026-03-22T01:57:17.685379",
+      "index": 7,
+      "is_rescue_request": true,
+      "urgency": "critical",
+      "needs": [
+        "medical",
+        "food",
+        "financial_aid"
+      ],
+      "location_mentions": [
+        "Gaza"
+      ],
+      "language": "en",
+      "summary": "Muhammad is requesting urgent help to buy medicine for his father and brother, who are in very bad condition and pain, and also for food, linking to a crowdfunding campaign."
+    },
+    {
+      "text": "I underwent surgery on my leg and I am struggling to afford the necessary medication and food. \nPlease help me \nby donating/sharing.",
+      "timestamp": "2026-03-21T21:17:48.000Z",
+      "query_used": "(food OR water OR medical OR \"aid needed\" OR supplies OR طعام OR ماء OR دواء OR مستشفى OR جريح) (Gaza OR غزة) -is:retweet min_replies:2",
+      "scraped_at": "2026-03-22T01:57:17.691901",
+      "index": 8,
+      "is_rescue_request": true,
+      "urgency": "high",
+      "needs": [
+        "medical",
+        "food",
+        "financial_aid"
+      ],
+      "location_mentions": [],
+      "language": "en",
+      "summary": "A person who underwent leg surgery is struggling to afford medication and food and is requesting donations or shares."
+    },
+    {
+      "text": "We lost 30000 followers  today and most posts were deleted because of the publication of pictures of destruction in Tel Aviv and exposing Israel's crimes, please follow the account and write anything in the comments",
+      "timestamp": "2026-03-21T20:49:39.000Z",
+      "query_used": "(missing OR lost OR disappeared OR \"find my family\" OR مفقود OR فقد OR \"بحث عن\") (Gaza OR غزة) -is:retweet min_retweets:5",
+      "scraped_at": "2026-03-22T01:57:25.895963",
+      "index": 5,
+      "is_rescue_request": true,
+      "urgency": "medium",
+      "needs": [],
+      "location_mentions": [
+        "Tel Aviv",
+        "Israel"
+      ],
+      "language": "en",
+      "summary": "An account reports losing 30,000 followers and having posts deleted due to content exposing Israel's actions, requesting new followers and comments."
+    },
+    {
+      "text": "I wish someone famous would notice me… not as just a follower, but as if I were family   \nTo believe in my voice that gets lost in the crowd… unheard   \nI don’t want fame… just a small chance for my voice to be heard before silence consumes me \n\nhttps://\ngofund.me/2fe354917",
+      "timestamp": "2026-03-21T20:27:02.000Z",
+      "query_used": "(missing OR lost OR disappeared OR \"find my family\" OR مفقود OR فقد OR \"بحث عن\") (Gaza OR غزة) -is:retweet min_retweets:5",
+      "scraped_at": "2026-03-22T01:57:25.903450",
+      "index": 6,
+      "is_rescue_request": true,
+      "urgency": "high",
+      "needs": [],
+      "location_mentions": [],
+      "language": "en",
+      "summary": "An individual urgently requests their voice to be heard and noticed, linking to a GoFundMe campaign for unspecified needs."
+    },
+    {
+      "text": "Amidst the conflict and crisis across the world right now, we can’t forget the people, and especially children, of Gaza, where over a million children are in crisis.\n\nIt is a humanitarian emergency that especially puts girls at risk. We cannot stay silent. Call your lawmakers.",
+      "timestamp": "2026-03-21T22:14:26.000Z",
+      "query_used": "(SOS OR emergency OR \"help now\" OR \"urgent need\" OR استغاثة OR أنقذونا OR ساعدونا OR \"عاجل جدا\") (Gaza OR غزة) -is:retweet min_faves:10",
+      "scraped_at": "2026-03-22T01:57:35.395665",
+      "index": 2,
+      "is_rescue_request": true,
+      "urgency": "critical",
+      "needs": [
+        "advocacy"
+      ],
+      "location_mentions": [
+        "Gaza"
+      ],
+      "language": "en",
+      "summary": "The tweet highlights a critical humanitarian emergency in Gaza, where over a million children, especially girls, are at risk, urging people to contact their lawmakers."
+    },
+    {
+      "text": "Good morning, I’m reaching out with a heavy heart. It has been several days without any donations, and we are in urgent need of help. Every small contribution can make a big difference for us. Please consider donating or sharing our story. ",
+      "timestamp": "2026-03-21T04:41:23.000Z",
+      "query_used": "(SOS OR emergency OR \"help now\" OR \"urgent need\" OR استغاثة OR أنقذونا OR ساعدونا OR \"عاجل جدا\") (Gaza OR غزة) -is:retweet min_faves:10",
+      "scraped_at": "2026-03-22T01:57:37.427386",
+      "index": 4,
+      "is_rescue_request": true,
+      "urgency": "high",
+      "needs": [
+        "donations"
+      ],
+      "location_mentions": [],
+      "language": "en",
+      "summary": "An urgent appeal is made for donations and sharing a story due to a lack of contributions over several days."
+    },
+    {
+      "text": "This is an absolute emergency; the situation they are facing is beyond cruel—it is impossible to describe.\nThey need you. \n\nPlease, I beg you to donate and share this campaign.",
+      "timestamp": "2026-03-21T00:05:32.000Z",
+      "query_used": "(SOS OR emergency OR \"help now\" OR \"urgent need\" OR استغاثة OR أنقذونا OR ساعدونا OR \"عاجل جدا\") (Gaza OR غزة) -is:retweet min_faves:10",
+      "scraped_at": "2026-03-22T01:57:37.431118",
+      "index": 5,
+      "is_rescue_request": true,
+      "urgency": "critical",
+      "needs": [
+        "donations"
+      ],
+      "location_mentions": [],
+      "language": "en",
+      "summary": "An urgent plea is made for donations and sharing a campaign to address an indescribably cruel and absolute emergency situation."
+    },
+    {
+      "text": "A rainstorm in Gaza on the first day of Eid. Help now: \nhttps://\nchuffed.org/project/113222\n-tent-campaign-the-sameer-project\n…\n\nWhile families around the world celebrated Eid al-Fitr in warmth and comfort, Gaza's displaced families faced a different reality - torrential rain flooding their tents, collapsing makeshift shelters,",
+      "timestamp": "2026-03-20T21:31:20.000Z",
+      "query_used": "(SOS OR emergency OR \"help now\" OR \"urgent need\" OR استغاثة OR أنقذونا OR ساعدونا OR \"عاجل جدا\") (Gaza OR غزة) -is:retweet min_faves:10",
+      "scraped_at": "2026-03-22T01:57:37.450260",
+      "index": 8,
+      "is_rescue_request": true,
+      "urgency": "critical",
+      "needs": [
+        "shelter",
+        "donations"
+      ],
+      "location_mentions": [
+        "Gaza"
+      ],
+      "language": "en",
+      "summary": "The tweet highlights the critical situation of displaced families in Gaza facing torrential rain and collapsing shelters during Eid al-Fitr, requesting immediate help via a tent campaign."
+    }
+  ]
+}

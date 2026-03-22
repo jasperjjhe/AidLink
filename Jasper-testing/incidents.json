@@ -1,0 +1,132 @@
+[
+  {
+    "incident_id": "f6442a5f-0b83-44c3-8bbe-667179951ecb",
+    "summary": "A wall from the previously damaged Al-Rabat College building collapsed onto tents of displaced people in the Al-Mawasi area of Khan Yunis, resulting in 3 confirmed fatalities and several injuries.",
+    "time_of_incident": "2026-03-16T00:04:59.000Z",
+    "time_since_incident": "146.9h",
+    "criticality": "cleanup",
+    "location_centre": {
+      "lat": 31.35,
+      "lon": 34.285
+    },
+    "location_radius_km": 0.5,
+    "location_source": "gemini",
+    "casualties_estimate": 3,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 15,
+    "manpower_needed": "moderate",
+    "manpower_source": "gemini",
+    "verification": "verified",
+    "posts": [
+      "https://x.com/HuDa_NaIm92/status/2033523473662791906",
+      "https://x.com/PalestineDays/status/2033470999748890929",
+      "https://x.com/openeysdown/status/2033468004214702322",
+      "https://x.com/PalestineDays/status/2033445663166660636",
+      "https://x.com/Talal81ibrahim/status/2033396893745557677",
+      "https://x.com/qudspressagency/status/2033522051424624734",
+      "https://x.com/kdismin/status/2033570919164354986",
+      "https://x.com/QkrSocialist/status/2033496226532868184",
+      "https://x.com/MahmoudMassri15/status/2033333670799368222"
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HDiGr8WX0AABgw1?format=jpg&name=small"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HDiFg7DWEAACwht?format=png&name=small"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HDhi8UfWsAA-EPt?format=jpg&name=small"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HDhi8VBaQAA6tYu?format=jpg&name=360x360"
+      },
+      {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/HDhi8VRbMAAdOlT?format=jpg&name=360x360"
+      }
+    ],
+    "last_updated": "2026-03-22T02:56:28.393934"
+  },
+  {
+    "incident_id": "d9cd5497-0813-49cf-bf9b-f85e2fb57af6",
+    "summary": "A house wall collapsed onto tents of displaced people, reportedly due to strong winds, in an unspecified area of Gaza, killing 5 individuals.",
+    "time_of_incident": "2026-03-16T00:20:25.000Z",
+    "time_since_incident": "146.7h",
+    "criticality": "cleanup",
+    "location_centre": {
+      "lat": 31.4,
+      "lon": 34.35
+    },
+    "location_radius_km": 2.0,
+    "location_source": "gemini",
+    "casualties_estimate": 5,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 20,
+    "manpower_needed": "large",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/mhammedziad4/status/2033355193052492011",
+      "https://x.com/Azhae985/status/2033337555391861133"
+    ],
+    "media": [],
+    "last_updated": "2026-03-22T02:56:28.394020"
+  },
+  {
+    "incident_id": "5f8869a0-cf10-4410-b9f2-2dce1fd9b1d6",
+    "summary": "Nighttime chaos was reported in Khan Yunis with fires, rubble, and people calling for help for victims trapped or injured in debris, following an Israeli strike.",
+    "time_of_incident": "2026-03-10T19:24:48.000Z",
+    "time_since_incident": "271.6h",
+    "criticality": "cleanup",
+    "location_centre": {
+      "lat": 31.35,
+      "lon": 34.3
+    },
+    "location_radius_km": 0.5,
+    "location_source": "gemini",
+    "casualties_estimate": 5,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 10,
+    "manpower_needed": "moderate",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/grok/status/2031451223929340099"
+    ],
+    "media": [],
+    "last_updated": "2026-03-22T02:56:28.394052"
+  },
+  {
+    "incident_id": "c661b6a0-ce26-4ca5-9bee-078e886b2a9e",
+    "summary": "A video on social media shows the collapse of a modern building in an unspecified area of Gaza, with people seen fleeing from dust and fire, possibly due to a strike or strong winds affecting a damaged structure.",
+    "time_of_incident": "2026-03-16T23:42:33.000Z",
+    "time_since_incident": "123.3h",
+    "criticality": "cleanup",
+    "location_centre": {
+      "lat": 31.4,
+      "lon": 34.35
+    },
+    "location_radius_km": 0.5,
+    "location_source": "gemini",
+    "casualties_estimate": 3,
+    "casualties": "few",
+    "casualties_source": "gemini",
+    "manpower_needed_estimate": 10,
+    "manpower_needed": "moderate",
+    "manpower_source": "gemini",
+    "verification": "initial_reports",
+    "posts": [
+      "https://x.com/grok/status/2033690414675333445"
+    ],
+    "media": [],
+    "last_updated": "2026-03-22T03:01:10.156493"
+  }
+]
