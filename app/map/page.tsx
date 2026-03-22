@@ -2,8 +2,7 @@
 
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { SiteHeader } from "@/components/SiteHeader";
 import { IncidentDrawer } from "@/components/IncidentDrawer";
 import { useRouter } from "next/navigation";
 import type { Incident } from "@prisma/client";
@@ -42,24 +41,12 @@ export default function PublicMapPage() {
 
   return (
     <div className="flex h-screen flex-col">
-      <header className="border-b bg-background px-4 py-3 flex items-center justify-between shrink-0">
-        <Link href="/" className="font-bold text-xl">
-          AidLink
-        </Link>
-        <nav className="flex items-center gap-4">
-          <Link href="/" className="text-sm text-muted-foreground hover:text-foreground">
-            Home
-          </Link>
-          <Link href="/volunteer" className="text-sm text-muted-foreground hover:text-foreground">
-            Volunteer
-          </Link>
-          <Link href="/dashboard">
-            <Button variant="outline" size="sm">
-              Organizer Dashboard
-            </Button>
-          </Link>
-        </nav>
-      </header>
+      <SiteHeader
+        navItems={[
+          { href: "/", label: "Home" },
+          { href: "/volunteer", label: "Volunteer" },
+        ]}
+      />
 
       <div className="flex-1 flex overflow-hidden relative">
         <div className="flex-1 min-w-0">
@@ -82,17 +69,17 @@ export default function PublicMapPage() {
         )}
       </div>
 
-      <div className="absolute left-4 top-20 z-[1000] rounded-lg border bg-background/95 p-3 text-sm shadow">
+      <div className="absolute left-4 top-20 z-[1000] max-w-[calc(100vw-2rem)] rounded-lg border bg-background/95 p-3 text-sm shadow backdrop-blur supports-[backdrop-filter]:bg-background/80">
         <p className="font-medium">Map legend</p>
-        <div className="flex gap-3 mt-1">
-          <span className="flex items-center gap-1">
-            <span className="h-2.5 w-2.5 rounded-full bg-red-500" /> Unverified
+        <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1.5">
+          <span className="flex items-center gap-1.5 whitespace-nowrap">
+            <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-red-500" /> Unverified
           </span>
-          <span className="flex items-center gap-1">
-            <span className="h-2.5 w-2.5 rounded-full bg-amber-500" /> Partially verified
+          <span className="flex items-center gap-1.5 whitespace-nowrap">
+            <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-amber-500" /> Partially verified
           </span>
-          <span className="flex items-center gap-1">
-            <span className="h-2.5 w-2.5 rounded-full bg-emerald-500" /> Verified
+          <span className="flex items-center gap-1.5 whitespace-nowrap">
+            <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-500" /> Verified
           </span>
         </div>
       </div>

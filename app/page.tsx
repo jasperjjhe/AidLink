@@ -1,38 +1,18 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { SiteHeader } from "@/components/SiteHeader";
 import { SafetyNotice } from "@/components/SafetyNotice";
 import { Map, Users, LayoutDashboard, Shield } from "lucide-react";
 
 export default function LandingPage() {
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Hero */}
-      <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-14 items-center justify-between">
-          <Link href="/" className="font-bold text-xl">
-            AidLink
-          </Link>
-          <nav className="flex items-center gap-4">
-            <Link
-              href="/map"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground"
-            >
-              Crisis Map
-            </Link>
-            <Link
-              href="/volunteer"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground"
-            >
-              Volunteer
-            </Link>
-            <Link href="/dashboard">
-              <Button variant="outline" size="sm">
-                Organizer Dashboard
-              </Button>
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader
+        navItems={[
+          { href: "/map", label: "Crisis Map" },
+          { href: "/volunteer", label: "Volunteer" },
+        ]}
+      />
 
       <main className="flex-1">
         <section className="container py-24 px-4">

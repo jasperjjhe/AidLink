@@ -144,14 +144,13 @@ export function OrganizerDashboard() {
   );
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100">
-      {/* Header */}
-      <header className="border-b border-slate-800 bg-slate-900/50 px-4 py-3 flex items-center justify-between sticky top-0 z-50">
-        <div className="flex items-center gap-4">
-          <Link href="/" className="font-bold text-xl text-white">
+    <div className="flex min-h-screen flex-col bg-slate-950 text-slate-100">
+      <header className="sticky top-0 z-50 flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 bg-slate-900/50 px-4 py-3">
+        <div className="flex min-w-0 items-center gap-2 sm:gap-4">
+          <Link href="/" className="shrink-0 font-bold text-xl text-white">
             AidLink
           </Link>
-          <span className="text-slate-400 text-sm font-medium">Command Center</span>
+          <span className="hidden text-sm font-medium text-slate-400 sm:inline">Command Center</span>
         </div>
         <div className="flex items-center gap-2">
           <span className="text-xs text-slate-500 bg-slate-800 px-2 py-1 rounded">
@@ -197,10 +196,9 @@ export function OrganizerDashboard() {
         />
       </div>
 
-      {/* Main layout */}
-      <div className="flex flex-1 overflow-hidden">
-        <div className="flex-1 flex flex-col min-w-0 p-4">
-          <Tabs defaultValue="incidents" className="flex-1 flex flex-col min-h-0">
+      <div className="flex min-h-0 flex-1 flex-col overflow-y-auto lg:flex-row lg:overflow-hidden">
+        <div className="flex min-h-0 min-w-0 flex-1 flex-col p-4">
+          <Tabs defaultValue="incidents" className="flex min-h-0 flex-1 flex-col">
             <TabsList className="bg-slate-800 border border-slate-700">
               <TabsTrigger value="incidents">Incident Board</TabsTrigger>
               <TabsTrigger value="volunteers">Volunteer Roster</TabsTrigger>
@@ -221,7 +219,7 @@ export function OrganizerDashboard() {
                   <option value="VERIFIED">Verified</option>
                 </select>
               </div>
-              <div className="grid gap-3 overflow-y-auto max-h-[400px] pr-2">
+              <div className="grid max-h-[min(28rem,50vh)] gap-3 overflow-y-auto pr-2 lg:max-h-[400px]">
                 {filteredIncidents.map((inc) => (
                   <IncidentCard
                     key={inc.id}
@@ -249,8 +247,8 @@ export function OrganizerDashboard() {
           </Tabs>
         </div>
 
-        <div className="w-[420px] border-l border-slate-800 flex flex-col shrink-0">
-          <div className="h-[320px] p-4 border-b border-slate-800">
+        <div className="flex w-full shrink-0 flex-col border-t border-slate-800 lg:w-[420px] lg:border-l lg:border-t-0">
+          <div className="h-52 border-b border-slate-800 p-4 sm:h-64 lg:h-[320px]">
             <IncidentMap
               incidents={incidents}
               selectedId={selectedId}

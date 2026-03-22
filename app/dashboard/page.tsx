@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useAuthStore } from "@/lib/auth-store";
 import { OrganizerDashboard } from "@/components/OrganizerDashboard";
 import { LogIn } from "lucide-react";
@@ -13,24 +14,35 @@ export default function DashboardPage() {
 
   useEffect(() => setMounted(true), []);
 
-  if (!mounted) return null;
+  if (!mounted) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-muted/30">
+        <div className="h-8 w-8 animate-pulse rounded-full bg-muted" aria-hidden />
+        <span className="sr-only">Loading</span>
+      </div>
+    );
+  }
 
   if (role !== "organizer") {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-slate-950 text-white">
-        <div className="max-w-md text-center space-y-6">
-          <h1 className="text-2xl font-bold">Organizer Access</h1>
-          <p className="text-slate-300">
-            This dashboard is for relief organizers. Log in to manage incidents and volunteers.
-          </p>
-          <Button onClick={loginAsOrganizer} size="lg" className="gap-2">
-            <LogIn className="h-4 w-4" />
-            Log in as Organizer (Demo)
-          </Button>
-          <Link href="/" className="block text-sm text-slate-400 hover:text-white">
-            ← Back to home
-          </Link>
-        </div>
+      <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-muted/30">
+        <Card className="w-full max-w-md">
+          <CardHeader className="text-center">
+            <CardTitle className="text-xl">Organizer access</CardTitle>
+            <CardDescription>
+              This dashboard is for relief organizers. Log in to manage incidents and volunteers.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="flex flex-col items-center gap-4">
+            <Button onClick={loginAsOrganizer} size="lg" className="gap-2 w-full sm:w-auto">
+              <LogIn className="h-4 w-4" />
+              Log in as Organizer (Demo)
+            </Button>
+            <Link href="/" className="text-sm text-muted-foreground hover:text-foreground">
+              ← Back to home
+            </Link>
+          </CardContent>
+        </Card>
       </div>
     );
   }

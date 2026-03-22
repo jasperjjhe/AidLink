@@ -2,9 +2,9 @@
 
 import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { SiteHeader } from "@/components/SiteHeader";
 import { SafetyNotice } from "@/components/SafetyNotice";
 import { VolunteerForm } from "@/components/VolunteerForm";
 import { IncidentCard } from "@/components/IncidentCard";
@@ -49,71 +49,59 @@ function VolunteerContent() {
   };
 
   return (
-    <div className="min-h-screen">
-      <header className="border-b bg-background px-4 py-3 flex items-center justify-between">
-        <Link href="/" className="font-bold text-xl">
-          AidLink
-        </Link>
-        <nav className="flex items-center gap-4">
-          <Link href="/map" className="text-sm text-muted-foreground hover:text-foreground">
-            Crisis Map
-          </Link>
-          <Link href="/dashboard">
-            <Button variant="outline" size="sm">
-              Organizer Dashboard
-            </Button>
-          </Link>
-        </nav>
-      </header>
+    <div className="flex min-h-screen flex-col">
+      <SiteHeader navItems={[{ href: "/map", label: "Crisis Map" }]} />
 
-      <main className="container max-w-4xl py-8 px-4">
-        <h1 className="text-2xl font-bold mb-2">Volunteer</h1>
-        <p className="text-muted-foreground mb-6">
-          Create your profile and offer to help at an incident. An organizer will review and may confirm your assignment.
-        </p>
+      <main className="flex flex-1 flex-col items-center px-4 py-8 sm:py-12">
+        <div className="w-full max-w-4xl">
+          <h1 className="text-2xl font-bold mb-2">Volunteer</h1>
+          <p className="text-muted-foreground mb-6">
+            Create your profile and offer to help at an incident. An organizer will review and may confirm your assignment.
+          </p>
 
-        <SafetyNotice
-          text="Interested does not mean assigned. An organizer may review and confirm you. Do not enter unsafe zones without authorization."
-          className="mb-8"
-        />
+          <SafetyNotice
+            text="Interested does not mean assigned. An organizer may review and confirm you. Do not enter unsafe zones without authorization."
+            className="mb-8"
+          />
 
-        {!profileCreated ? (
-          <VolunteerForm onSuccess={handleProfileCreated} />
-        ) : (
-          <Card className="mb-8">
-            <CardHeader>
-              <CardTitle>Your Profile</CardTitle>
-              <CardContent className="pt-0">
+          {!profileCreated ? (
+            <VolunteerForm onSuccess={handleProfileCreated} />
+          ) : (
+            <Card className="mb-8">
+              <CardHeader>
+                <CardTitle>Your Profile</CardTitle>
+              </CardHeader>
+              <CardContent>
                 <p className="text-sm text-muted-foreground">
                   Profile created. You can now offer to help at incidents below.
                 </p>
               </CardContent>
-            </CardHeader>
-          </Card>
-        )}
+            </Card>
+          )}
 
-        <h2 className="text-lg font-semibold mb-4">Open Incidents</h2>
-        <div className="grid gap-4">
-          {publicIncidents.map((inc) => (
-            <IncidentCard
-              key={inc.id}
-              incident={inc}
-              interestedCount={counts[inc.id]?.i ?? 0}
-              confirmedCount={counts[inc.id]?.c ?? 0}
-              checkedInCount={counts[inc.id]?.ch ?? 0}
-              actions={
-                profileCreated && (
-                  <Button
-                    size="sm"
-                    onClick={() => handleOfferHelp(inc.id)}
-                    disabled={!profileCreated}
-                  >
-                    Offer to Help
-                  </Button>
-                )
-              }
-            />
-          ))}
+          <h2 className="text-lg font-semibold mb-4">Open Incidents</h2>
+          <div className="grid gap-4">
+            {publicIncidents.map((inc) => (
+              <IncidentCard
+                key={inc.id}
+                incident={inc}
+                interestedCount={counts[inc.id]?.i ?? 0}
+                confirmedCount={counts[inc.id]?.c ?? 0}
+                checkedInCount={counts[inc.id]?.ch ?? 0}
+                actions={
+                  profileCreated && (
+                    <Button
+                      size="sm"
+                      onClick={() => handleOfferHelp(inc.id)}
+                      disabled={!profileCreated}
+                    >
+                      Offer to Help
+                    </Button>
+                  )
+                }
+              />
+            ))}
+          </div>
         </div>
       </main>
     </div>
@@ -122,7 +110,14 @@ function VolunteerContent() {
 
 export default function VolunteerPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
+    <Suspense
+      fallback={
+        <div className="min-h-screen flex flex-col items-center justify-center gap-3 bg-muted/20">
+          <div className="h-8 w-8 animate-pulse rounded-full bg-muted" aria-hidden />
+          <span className="sr-only">Loading</span>
+        </div>
+      }
+    >
       <VolunteerContent />
     </Suspense>
   );
