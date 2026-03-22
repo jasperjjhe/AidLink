@@ -1,20 +1,19 @@
 # AidLink — Crisis Response Coordination Platform
 
-A hackathon MVP for coordinating volunteers during emergencies. Helps local relief organizers triage emergency reports, verify incidents, and safely assign volunteers.
+A hackathon MVP for coordinating relief during emergencies. It helps local organizers triage reports, verify incidents, and assign volunteers—focused on a **Gaza-area crisis map** with optional JSON-backed incident data and a SQLite database for organizer workflows.
 
 ## Features
 
-- **Landing page** — Hero, mission, CTAs, safety disclaimer
-- **Public crisis map** — Incidents with verification-colored pins (red/yellow/green)
-- **Volunteer flow** — Profile creation, offer help, staged status (interested → assigned → confirmed → checked-in)
-- **Organizer dashboard** — Command-center style with:
-  - Metrics (active incidents, unverified, critical, volunteers by stage, understaffed)
-  - Incident board with filters
-  - Map + side panel
-  - Volunteer roster
-  - Incoming reports (simulated social data)
-  - Assignment controls
-  - QR / check-in code flow
+- **Landing page** — Hero, mission, CTAs (Crisis Map + Organizer Map), safety disclaimer
+- **Public crisis map** — Leaflet map with **Gaza view** / **World map**, Gaza strip outline, zone summaries, and an open-incidents panel. Incidents load from `data/incidents.json` when present, otherwise from the API (Prisma), and are **scoped to the Gaza fly bounds** for display.
+- **Incident drawer (public)** — Rich incident summary from JSON (criticality, casualty/manpower estimates, media, source posts) and a **phone contact** for offering help (no in-app volunteer signup on this path).
+- **Incident report page** — `/map/incident/[id]` shows database-backed detail: verification, severity, **time-urgency** tier, injuries estimate, situation summary, and inbound **report** feed when seeded.
+- **Organizer map** (`/dashboard`) — Map-first organizer workspace (not a separate metrics “command center”):
+  - Demo **Log in as Organizer** (client-side Zustand persist; no real auth server)
+  - Same map UX as the public view plus **organizer incident drawer**: verify, edit fields, **resolve** (remove from open map), assign volunteers, move assignments through statuses, **check-in code** modal
+  - Bottom **open incidents** strip with counts and quick actions
+  - Periodic refresh (≈15s) when logged in
+  - If the DB has no open incidents, **JSON incidents** can still appear as a read-only fallback on the map
 
 ## Tech Stack
 
@@ -34,14 +33,17 @@ A hackathon MVP for coordinating volunteers during emergencies. Helps local reli
 npm install
 
 # Configure database (SQLite, file:./dev.db)
-# .env already contains: DATABASE_URL="file:./dev.db"
+# Ensure .env contains: DATABASE_URL="file:./dev.db"
 
 # Generate Prisma client and create database
 npx prisma generate
 npx prisma db push
 
-# Seed demo data (8–12 incidents, 20+ volunteers)
+# Seed demo data (Gaza-area incidents, duplicate/false examples, 24+ volunteers, sample reports)
 npm run db:seed
+
+# Optional: enrich / replace map incidents via JSON pipeline
+# Place or update data/incidents.json (see /api/incidents-json)
 
 # Run dev server
 npm run dev
@@ -51,35 +53,46 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Demo Flow
 
-1. **Landing** → View Crisis Map / Volunteer / Organizer Dashboard
-2. **Map** → Click an incident pin → View details → "Offer to Help"
-3. **Volunteer** → Create profile → Offer help at incidents
-4. **Dashboard** → Log in as Organizer (demo) → Review incidents → Assign volunteers → Change status (interested → assigned → confirmed) → Check-in with code
+1. **Landing** → **View Crisis Map** (public) or **Organizer Map** (`/dashboard`).
+2. **Public map** → Use **Gaza view** (or zoom from world map) → Pick a marker or an incident from the panel → Read the side drawer; **contact** via the listed phone if you want to represent outreach.
+3. **Incident report page** — Use a **database** incident ID (from the organizer drawer, `/api/incidents`, or after seeding) and open `/map/incident/<id>` → Review **time urgency**, injuries estimate, situation summary, and **inbound reports** when seeded.
+4. **Organizer** → **Log in as Organizer (Demo)** → Select an incident → **Verify** status, **edit** details, **assign** volunteers from the **seed roster**, advance **assignment** statuses, open **check-in** with the incident code, or **resolve** the incident.
 
 ## Project Structure
 
 ```
 app/
-  page.tsx           # Landing
-  map/page.tsx       # Public crisis map
-  volunteer/page.tsx # Volunteer signup + offer help
-  dashboard/page.tsx # Organizer dashboard (protected)
-  api/               # API routes
+  page.tsx                    # Landing
+  map/page.tsx                # Public crisis map
+  map/incident/[id]/page.tsx  # DB incident + reports detail
+  dashboard/page.tsx          # Organizer map (demo gate → OrganizerMap)
+  api/                        # REST handlers (incidents, dashboard, offer-help, …)
 components/
-  ui/                # Button, Card, Badge, etc.
-  IncidentMap.tsx
-  IncidentCard.tsx
-  IncidentDrawer.tsx
-  VolunteerTable.tsx
+  ui/                         # Button, Card, Badge, etc.
+  GazaCrisisMap.tsx           # Map + Gaza strip + markers
+  OrganizerMap.tsx            # Logged-in organizer map shell
+  MapIncidentDrawer.tsx       # Public / JSON incident drawer
+  OrganizerIncidentDrawer.tsx # Organizer controls + assignment slot
+  OrganizerOpenIncidentsPanel.tsx
+  OpenIncidentsPanel.tsx
+  GazaZonePanelMapIncident.tsx
   AssignmentPanel.tsx
-  MetricsOverview.tsx
   CheckInModal.tsx
-  IncomingReports.tsx
+  EditIncidentModal.tsx
+  SiteHeader.tsx
   ...
+data/
+  incidents.json              # Optional: served by /api/incidents-json
 lib/
   prisma.ts
   utils.ts
-  auth-store.ts
+  auth-store.ts               # Demo organizer/session role
+  gaza-zones.ts
+  criticality-meta.ts
+  time-urgency.ts
+  incident-adapters.ts
+types/
+  incident-json.ts            # JSON incident shape for the map
 prisma/
   schema.prisma
   seed.ts
@@ -89,6 +102,6 @@ prisma/
 
 Assignments should be reviewed by organizers. Do not enter unsafe zones without authorization or training.
 
-
 ## The Team
+
 Built by Jasper He, Leo Wu, Ethan Hoang, Daniel Zou
