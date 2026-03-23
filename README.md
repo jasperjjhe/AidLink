@@ -1,6 +1,6 @@
 # 🚨 AidLink — Crisis Response Coordination Platform
 
-🔗 **[View on Devpost](https://devpost.com/software/aidlink-p4327y)**
+### 🔗 **[View on Devpost](https://devpost.com/software/aidlink-p4327y)**
 
 AidLink is a real-time crisis coordination platform that monitors X (Twitter) for structural collapse reports in active conflict zones, verifies them using a multi-agent AI pipeline, and surfaces actionable incident data to local response coordinators. Built at ProduHacks 2026.
 
