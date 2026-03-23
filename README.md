@@ -197,6 +197,10 @@ prisma/
 
 Assignments should be reviewed by qualified coordinators. Do not enter unsafe zones without authorization or proper training.
 
+## 📄 License
+
+Proprietary — All Rights Reserved. See [LICENSE](./LICENSE) for details.
+
 ## 👥 Team
 
 Built by Jasper He, Leo Wu, Ethan Hoang, Daniel Zou — ProduHacks 2026
