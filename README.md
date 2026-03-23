@@ -12,6 +12,10 @@ $400 CAD prize + Guaranteed Internship Interviews
 ### 🥈 **2nd Place — Most Likely to Become a Startup**
 Guaranteed Admission to Spring VC's Build Accelerator Cohort + LMS Access
 
+## ⏯️ Backend Demo Video
+
+[![AidLink Backend Demo Video](https://img.youtube.com/vi/90FT3OW1LnA/0.jpg)](https://youtu.be/90FT3OW1LnA)
+
 ## ⚙️ How It Works
 
 1. **🔍 Scraper** — Playwright scrapes X every hour using Gemini-generated search queries in Arabic, Ukrainian, Farsi, and English. Gemini filters noise, clusters tweets into discrete incidents, and extracts location, casualty estimates, and criticality.
